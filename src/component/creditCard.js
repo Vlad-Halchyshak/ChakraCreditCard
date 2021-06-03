@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, Stack, Input } from '@chakra-ui/react'
+import { Box, HStack, Stack, Input, Text } from '@chakra-ui/react'
 import { ViewIcon, SunIcon } from '@chakra-ui/icons'
 import React from 'react'
 
@@ -33,17 +33,17 @@ export const CreditCard = () => {
           <HStack marginLeft="0.5em">
             <ViewIcon />
           </HStack>
-          <HStack spacing="15rem">
+          <HStack spacing="auto">
             {hide ? (
               <Input
                 placeholder="type"
                 size="sm"
-                width="19rem"
+                width="10rem"
                 onBlur={onBlur}
                 onChange={onInputChange}
               />
             ) : (
-              <p onClick={() => setHide(true)}>{`${'$'}${inputValue}`}</p>
+              <Text fontSize="2xl" onClick={() => setHide(true)}>{`${'$'}${inputValue}`}</Text>
             )}
             <p>•••</p>
           </HStack>
